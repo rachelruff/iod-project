@@ -1,0 +1,11 @@
+.employee-table{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+
+td, th{
+    border: 1px solid black;
+    margin: 0;
+    padding: 5px;
+}

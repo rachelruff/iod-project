@@ -1,6 +1,6 @@
 const getAllEmployees = (req, res, next) => {
   const db = req.app.get("db");
-  // console.log(db)
+  console.log('hit getall')
   db.get_all_employees()
     .then(employees => {
       console.log(employees);
