@@ -1,44 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Skills Assessments:
 
-## Available Scripts
+Congratulations on making it through the first-round of screening. Your resume was impressive. We'd like to see your coding skills, but we don't believe in white boarding. In fact, did you know that most developers don't write more than 5-6 lines of codes without referencing documentation, Googling, Stack Overflowing etc.? So we don't expect you to do it for us under pressure. Instead, we have a brief assignment for you.
 
-In the project directory, you can run:
+ 
 
-### `npm start`
+Instructions
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Create a simple CRUD application using NodeJS and ReactJS. These two technologies are required. You're welcome to use any other technologies you are comfortable with such as ExpressJS, NextJS, Redux, Hapi etc. to help your application run properly. 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- You do not necessarily have to finish the entire application, so don't spend hours on it. We're happy to look at the code you have after an hour or two.
 
-### `npm test`
+- Use Bootstrap v4 or another CSS framework for easy and quick CSS.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- When you're done, zip up your code in a single compressed directory and email it back to us. 
 
-### `npm run build`
+- Bonus points if you also get it deployed to a cloud hosting service like Heroku and we can see it working.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- We are mostly looking to see your coding style, coding best practices (refactoring, semantic code, etc.), so imagine another developer is going to pick up your codebase and work on it at a later date. 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+ 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ 
 
-### `npm run eject`
+The Application
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You're creating an ultra-simplified employee management app. Our application needs to be able to:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- add new employees (C)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- view all current employees in a simple table (R)
 
-## Learn More
+- update employee details (U)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- delete employees that leave the company (D)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ 
+
+For each employee, the HR manager needs to see the following attributes in a simple table:
+
+- employee ID number
+
+- first name
+
+- last name
+
+- email address
+
+- phone number
+
+- salary
+
+ 
+
+That's it. Other than that, feel free to get creative.
+
+ 
+
+ 
+
+Example
+
+Here is an example of something we threw together, to give you an idea of what we are looking for:
+
+https://iod-employee-management.herokuapp.com/
