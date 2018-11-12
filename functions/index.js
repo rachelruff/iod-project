@@ -19,13 +19,14 @@ massive(secrets.connectionString)
   .then(db => {
     app.set("db", db);
   })
-  .catch(console.log, '*******');
+  .catch(console.log, "*******");
 
 app.get("/api/tester", (req, res) => {
   res.send("You hit my endpoint!");
 });
 
 app.get("/api/getAllEmployees", mainCtrl.getAllEmployees);
+app.post("/api/addEmployee", mainCtrl.addEmployee);
 
 app.listen(port || 3001, () => {
   console.log(`App listening on port ${port || 3001}!`);

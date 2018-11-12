@@ -23,7 +23,8 @@ class CreateEmployee extends Component {
     const { firstName, lastName, email, salary } = this.state;
     axios
       .post("/api/addEmployee", { firstName, lastName, email, salary })
-      .then(resp => console.log(resp).cath(err => console.log(err)));
+      .then(resp => console.log(resp))
+      .catch(err => console.log(err));
   };
   render() {
     const { firstName, lastName, email, salary } = this.state;
@@ -72,7 +73,7 @@ class CreateEmployee extends Component {
               onChange={e => this.handleChange(e)}
             />
           </label>
-          <button>Submit</button>
+          <button onClick={() => this.submitEmployee()}>Submit</button>
           <Link to="/">
             <button>Cancel</button>
           </Link>
