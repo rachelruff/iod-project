@@ -26,7 +26,10 @@ app.get("/api/tester", (req, res) => {
 });
 
 app.get("/api/getAllEmployees", mainCtrl.getAllEmployees);
+app.get('/api/getEmployee/:id', mainCtrl.getEmployee);
 app.post("/api/addEmployee", mainCtrl.addEmployee);
+app.delete("/api/deleteEmployee/:id", mainCtrl.deleteEmployee);
+app.put("/api/updateEmployee/:id", mainCtrl.updateEmployee)
 
 app.listen(port || 3001, () => {
   console.log(`App listening on port ${port || 3001}!`);

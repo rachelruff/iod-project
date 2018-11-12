@@ -1,1 +1,1 @@
-select * from "public"."Employees" where id= $1;
+select * from "public"."Employees" where "Id"= $1;

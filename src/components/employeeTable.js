@@ -13,14 +13,28 @@ class EmployeeTable extends Component {
   }
 
   componentDidMount() {
-    axios.get("/api/getAllEmployees").then(arr => {
+   this.getEmployees();
+  }
+
+  getEmployees = () => {
+    axios
+    .get("/api/getAllEmployees")
+    .then(arr => {
       console.log("hit", arr);
       this.setState({
         employees: arr.data
       });
-      // .catch(err => console.log(err));
-    });
+    })
+    // .catch(err => console.log(err));
   }
+  deleteEmployee = id => {
+    console.log('hit delete')
+    axios
+      .delete(`/api/deleteEmployee/${id}`)
+      .then(resp => {console.log(resp); this.getEmployees()})
+      .catch(err => console.log(err));
+  };
+
   render() {
     const { employees } = this.state;
     console.log(employees);
@@ -33,7 +47,6 @@ class EmployeeTable extends Component {
             <th>Address</th>
             <th>Salary</th>
             <th>Actions</th>
-            <th />
           </tr>
           {employees.map((emp, index) => {
             return (
@@ -52,7 +65,13 @@ class EmployeeTable extends Component {
                     <button>Update</button>
                   </Link>
 
-                  <button onClick={() => {this.deleteEmployee(emp.Id)}}>Delete</button>
+                  <button
+                    onClick={() => {
+                      this.deleteEmployee(emp.Id);
+                    }}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             );
